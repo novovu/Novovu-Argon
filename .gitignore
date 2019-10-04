@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/Novovu.Argon/v16/Server/sqlite3
+/Novovu.Argon/obj/x86/Debug
+/Novovu.Argon.Testbench/bin/x86/Debug
+/packages

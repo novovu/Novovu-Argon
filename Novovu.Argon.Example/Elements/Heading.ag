@@ -1,0 +1,17 @@
+﻿<ArgonElement>
+<Design>
+<h1 id="heading">${$.heading}</h1>
+</Design>
+<Script>
+function construct (heading) => {
+	build({heading=heading})
+}
+hook("changeHeading", (newHeadingText) => {
+	$.heading = newHeadingText;
+	rebuild();
+});
+getid("heading").onTextChange => (newtext) {
+	call("headingChange", {newtext});
+}
+</Script>
+</ArgonElement>
