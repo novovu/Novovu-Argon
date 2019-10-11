@@ -90,5 +90,5 @@ C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\N
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.csproj.CoreCompileInputs.cache
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.exe
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.pdb
-C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.Form1.resources
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.csproj.CopyComplete
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.Main.resources

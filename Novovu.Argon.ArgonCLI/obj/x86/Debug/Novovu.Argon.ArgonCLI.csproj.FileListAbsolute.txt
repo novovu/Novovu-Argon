@@ -1,0 +1,7 @@
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.ArgonCLI.exe.config
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.ArgonCLI.exe
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.ArgonCLI.pdb
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csprojAssemblyReference.cache
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.exe
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.pdb

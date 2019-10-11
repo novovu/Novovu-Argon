@@ -45,11 +45,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Elements\Heading.ag" />
+    <None Include="Compositions\Composition1.agc" />
+    <None Include="Elements\Global\Heading.ag" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Compositions\" />
-    <Folder Include="Styles\" />
+    <Content Include="Scripts\metaelements.js" />
+    <Content Include="Styles\hdg.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
