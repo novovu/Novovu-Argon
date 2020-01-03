@@ -72,5 +72,11 @@
   <ItemGroup>
     <EmbeddedResource Include="AFX\argonpayload.js" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Novovu.Argon\Novovu.Argon.csproj">
+      <Project>{7f9feadd-bac1-4c23-8b94-511b07f5b46f}</Project>
+      <Name>Novovu.Argon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

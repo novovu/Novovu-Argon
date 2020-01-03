@@ -5,3 +5,6 @@ C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\No
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csproj.CoreCompileInputs.cache
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.exe
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.pdb
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.dll
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.pdb
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csproj.CopyComplete
