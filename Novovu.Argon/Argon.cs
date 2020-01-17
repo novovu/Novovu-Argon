@@ -5,11 +5,50 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using Novovu.Xenon;
 namespace Novovu.Argon
 {
     public class Argon
     {
+        public static void Package(string compFolder, string output)
+        {
+            if (Directory.Exists("out"))
+            {
+                Directory.Delete("out", true);
+            }
+            Directory.CreateDirectory("out");
+            foreach(string file in Directory.GetFiles(compFolder))
+            {
+                FileInfo fl = new FileInfo(file);
+                if (fl.Extension == ".agc")
+                {
+                    Console.WriteLine("Building composition: " + fl.Name);
+                }
+                ReadComposition(file, "out/" + (fl.Name.Replace(fl.Extension,"")) + ".agc" );
+                
+               
+            }
+            Console.WriteLine("Packing archive");
+            File.WriteAllText("out/" + "ARGON_PACK", "1.0.0");
+
+            Xenon.XEF.XEFile FILE = new Xenon.XEF.XEFile();
+            FILE.ImportFile("ARGON_PACK", "out/" + "ARGON_PACK");
+            foreach (string file in Directory.GetFiles("out"))
+            {
+                FileInfo fl = new FileInfo(file);
+                Console.WriteLine("Importing " + fl.Name.Replace(fl.Extension, ""));
+                FILE.ImportFile(new FileInfo(file).Name, file);
+            }
+            Console.WriteLine("Exporting archive");
+            if (!output.Contains(".ag.xef"))
+            {
+                output += ".ag.xef";
+            }
+            Xenon.XEF.BuildXEF.BuildXEFile(FILE, output);
+
+            Console.WriteLine("Cleaning up...");
+            Directory.Delete("out/", true);
+        }
         public static void ReadComposition(string comp, string output)
         {
             string com = File.ReadAllText(comp);

@@ -8,3 +8,14 @@ C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\No
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.pdb
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csproj.CopyComplete
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.ArgonCLI.exe.config
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.ArgonCLI.exe
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.ArgonCLI.pdb
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.dll
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Xenon.XEF.dll
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Argon.pdb
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\bin\x86\Debug\Novovu.Xenon.XEF.pdb
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csprojAssemblyReference.cache
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.csproj.CopyComplete
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.exe
+C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.ArgonCLI\obj\x86\Debug\Novovu.Argon.ArgonCLI.pdb
