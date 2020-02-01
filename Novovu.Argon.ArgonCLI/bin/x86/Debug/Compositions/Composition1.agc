@@ -1,6 +1,25 @@
 ﻿<Includes>
-  <Script src="metaelements.js"/>
-  <Style src="hdg.css"/>
+  <Style src="semantic.min.css"/>
   <Element src="Global/*"/>
 </Includes>
-<Heading text="HelloWorld"> 123a <Heading text="bruh.moment"> 123b </Heading> 123c</Heading>
+<Column>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon" color="primary"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+</Column>
+<Column>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon" color="primary"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+</Column>
+<Column>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon" color="primary"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+<AnimatedButton text="hello" icon="right arrow icon"></AnimatedButton>
+</Column>

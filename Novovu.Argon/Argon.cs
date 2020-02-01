@@ -90,6 +90,7 @@ namespace Novovu.Argon
 
                         foreach (string file in Directory.GetFiles($"{type.ToString()}s/{src}"))
                         {
+
                             Console.WriteLine($"{type.ToString()}s/{src}");
                             FileIncludes fix = new FileIncludes();
                             fix.FileType = type;
@@ -202,15 +203,38 @@ namespace Novovu.Argon
             int inputFields = full.IndexOf($"<{element}");
             int inputEnd = full.IndexOf(">");
             string paramss = full.Substring(inputFields, inputEnd - inputFields).Replace($"<{element} ", "");
-            string[] paramsx = paramss.Split('=');
+            string[] paramsx = paramss.Split('"');
             elemobj.ClearAttributes();
+            string handleParam = null;
             if (paramsx.Length > 1)
             {
-                for (int i = 0; i < paramsx.Length; i += 2)
+
+                for (int i = 0; i < paramsx.Length; i += 1)
                 {
-                    string name = paramsx[i];
-                    string value = paramsx[i + 1].Replace("\"", "").Replace("'", "");
-                    elemobj.Variables[name] = value;
+                    //Console.WriteLine(paramsx[i]);
+                    if (handleParam == null)
+                    {
+                        handleParam = paramsx[i];
+                        if (handleParam.ToCharArray().Length > 0)
+                        {
+                            if (handleParam.ToCharArray()[0] == ' ')
+                            {
+                                handleParam = handleParam.Substring(1);
+                            }
+                            handleParam = handleParam.Substring(0, handleParam.Length - 1);
+                        }else
+                        {
+                            handleParam = null;
+                        }
+                        
+                    }else
+                    {
+
+                        elemobj.Variables[handleParam] = paramsx[i].Replace("\"", "").Replace("'", "");
+
+                        handleParam = null;
+                    }
+                    
                 }
             }
 
@@ -236,7 +260,15 @@ namespace Novovu.Argon
             string asrc = Source;
             foreach (KeyValuePair<string, string> varia in Variables)
             {
+                
                 asrc = asrc.Replace("${" + varia.Key + "}", varia.Value);
+                if (asrc.Contains("${" + varia.Key + ":"))
+            {
+                string x = asrc.Substring(asrc.IndexOf("${" + varia.Key + ":"), asrc.Length - asrc.IndexOf("${" + varia.Key + ":"));
+                string full = x.Substring(0, x.IndexOf('}'));
+                asrc = asrc.Replace(full + "}", varia.Value);
+            }
+                asrc = asrc.Replace("${" + varia.Key + ":"+ varia.Value + "}", varia.Value);
             }
             return asrc;
         }
@@ -244,20 +276,41 @@ namespace Novovu.Argon
         {
             Source = File.ReadAllText(namefile);
             Name = new FileInfo(namefile).Name.Replace(".ag", "");
-            foreach (string properties in scrubber(Source))
+
+        Dictionary<string, string> dx = scrubber(Source);
+        try
+        {
+            foreach (KeyValuePair<string, string> kx in dx)
             {
-                Variables.Add(properties, "");
+                Variables.Add(kx.Key, kx.Value);
             }
+
+        }
+        catch
+        {
+
+        }
+            
+            
         }
         public void ClearAttributes()
         {
             Variables.Clear();
-            foreach (string properties in scrubber(Source))
+        Dictionary<string, string> dx = scrubber(Source);
+        try
+        {
+            foreach (KeyValuePair<string, string> kx in dx)
             {
-                Variables.Add(properties, "");
+                Variables.Add(kx.Key, kx.Value);
             }
+
         }
-        private List<string> scrubber(string input, List<string> iplist = default(List<string>))
+        catch
+        {
+
+        }
+    }
+        private Dictionary<string, string> scrubber(string input, Dictionary<string, string> iplist = default(Dictionary<string, string>))
         {
             int start = input.IndexOf("${");
             int end = input.IndexOf("}");
@@ -266,13 +319,23 @@ namespace Novovu.Argon
                 return iplist;
             }
             string name = input.Substring(start + 2, end - start - 2);
-            if (iplist == default(List<string>))
+            if (iplist == default(Dictionary<string, string>))
             {
-                iplist = new List<string>();
+                iplist = new Dictionary<string, string>();
             }
-            iplist.Add(name);
             input = input.Replace("${" + name + "}", "");
+        
+            if (name.Contains(":"))
+            {
+         
+                iplist.Add(name.Split(':')[0], name.Split(':')[1]);
+                return scrubber(input, iplist);
+            }else
+        {
+            iplist.Add(name, "");
             return scrubber(input, iplist);
+        }
+            
         }
     }
     class Variable
