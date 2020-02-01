@@ -42,6 +42,17 @@ namespace Novovu.Argon.ArgonCLI
                     {
                         Console.WriteLine("Composition folder is not specified.");
                     }
+                }else if (args[0] == "-b")
+                {
+                    if (args.Length > 2)
+                    {
+                        string incomp = args[1];
+                        string namespaces = args[2];
+                    }
+                    else
+                    {
+                        Console.WriteLine("Composition folder is not specified.");
+                    }
                 }
                 else
                 {
