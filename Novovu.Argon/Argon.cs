@@ -49,7 +49,7 @@ namespace Novovu.Argon
             Console.WriteLine("Cleaning up...");
             Directory.Delete("out/", true);
         }
-        public static void ReadComposition(string comp, string output)
+        public static List<FileIncludes> ReadComposition(string comp, string output)
         {
             string com = File.ReadAllText(comp);
             string includes = com.Replace("<Includes", "﴾");
@@ -119,6 +119,7 @@ namespace Novovu.Argon
                 Console.WriteLine($"{fx.Name}   -   {fx.FileType}");
             }
             BuildRender(outer, Files, output);
+            return Files;
         }
         static string ElemConstructor = @"%%NAME%%: {Source: '%%SOURCE%%'},";
         private static string ConstructElement(string name, string source)
@@ -243,7 +244,7 @@ namespace Novovu.Argon
         }
     }
 }
-    class FileIncludes
+    public class FileIncludes
     {
         public string Name;
         public enum FileTypes { Style, Script, Element }

@@ -72,13 +72,10 @@ C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\C
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.pdb
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.BrowserSubprocess.exe
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.BrowserSubprocess.pdb
-C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.Core.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.Core.pdb
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.Core.xml
-C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.pdb
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.XML
-C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.WinForms.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.WinForms.pdb
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\CefSharp.WinForms.XML
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Argon.Testbench.exe.config
@@ -192,3 +189,12 @@ C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.Testbench\bin\x86\Debug\
 C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Argon.pdb
 C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Xenon.XEF.pdb
 C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.exe.config
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.exe.config
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Xenon.WorkshopUI.dll
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Argon.dll
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Xenon.XEF.dll
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Argon.pdb
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Xenon.XEF.pdb
+C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Newtonsoft.Json.xml

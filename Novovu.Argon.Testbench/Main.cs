@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AGX11;
 namespace Novovu.Argon.Testbench
 {
     public partial class Main : Form
@@ -32,8 +32,10 @@ namespace Novovu.Argon.Testbench
             chromeBrowser.Dock = DockStyle.Fill;
         }
         public ChromiumWebBrowser chromeBrowser;
-        private void Form1_Load(object sender, EventArgs e)
+        private async Task Form1_Load(object sender, EventArgs e)
         {
+            Composition1 comp = new Composition1("Novovu is my name");
+            bool americaIsGreat = await comp.makeAmericaGreat<bool>(true, "Donald Trump");
             
         }
 

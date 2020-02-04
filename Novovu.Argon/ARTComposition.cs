@@ -12,10 +12,20 @@ namespace Novovu.Argon
     {
         private ChromiumWebBrowser handle;
         public bool CWB_Run = false;
-        public ARTComposition(object handl)
+        public void SetHandle(object ha)
         {
-            handle = (ChromiumWebBrowser)handl;
+            handle = (ChromiumWebBrowser)ha;
+            handle.LoadingStateChanged += Handle_LoadingStateChanged;
         }
+
+        private void Handle_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+        {
+            if (!e.IsLoading)
+            {
+                OnLoadComplete.Invoke(this, null);
+            }
+        }
+
         private async Task<T> JSEvalAsync<T>(string scr)
         {
             JavascriptResponse response = await handle.GetBrowser().MainFrame.EvaluateScriptAsync(scr);
@@ -32,6 +42,12 @@ namespace Novovu.Argon
             query += ")";
             return await JSEvalAsync<T>(query);
         }
+        public void Build(string src)
+        {
+            handle.GetBrowser().MainFrame.LoadHtml(src);
+            
+        }
+        public event EventHandler OnLoadComplete;
         public void Bind(string name, object binder)
         {
             handle.JavascriptObjectRepository.Register(name, binder, true);

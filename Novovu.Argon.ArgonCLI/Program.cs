@@ -48,6 +48,36 @@ namespace Novovu.Argon.ArgonCLI
                     {
                         string incomp = args[1];
                         string namespaces = args[2];
+
+
+                        foreach (string file in Directory.GetFiles(incomp))
+
+                        {
+                            
+                            string icmp_name = new FileInfo(file).Name.Replace(new FileInfo(file).Extension, "");
+                            Console.WriteLine("Rendering composition: " + icmp_name);
+                            string temp = Path.GetTempFileName();
+                            List<FileIncludes> x = Argon.ReadComposition(file, temp);
+                            List<FileIncludes> nxd = new List<FileIncludes>();
+                            string[] jsfiles;
+                            foreach (FileIncludes xx in x)
+                            {
+                                if (xx.FileType == FileIncludes.FileTypes.Script)
+                                {
+                                    nxd.Add(xx);
+                                }
+                            }
+                            jsfiles = new string[nxd.Count];
+                            for (int i = 0; i < jsfiles.Length; i++)
+                            {
+                                jsfiles[i] = nxd[i].Name;
+                            }
+                            ArgonCompiler.PrepareComposition(jsfiles, temp, icmp_name, namespaces);
+                        }
+                        ArgonCompiler.BuildFolder(namespaces);
+                        Console.WriteLine("Sucessfully built all compositions");
+                        Console.WriteLine("---> " + namespaces + ".dll");
+                        
                     }
                     else
                     {

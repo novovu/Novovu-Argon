@@ -8,6 +8,6 @@ namespace Novovu.Argon
 {
     public interface IArgonCompositionBuild
     {
-        string Build();
+        string Build(object handle);
     }
 }

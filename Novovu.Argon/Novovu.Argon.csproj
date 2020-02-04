@@ -70,9 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Argon.cs" />
+    <Compile Include="ArgonCBuild.cs" />
     <Compile Include="ArgonCompiler.cs" />
     <Compile Include="ArgonComposition.cs" />
     <Compile Include="ArgonUIPackage.cs" />
+    <Compile Include="ArgonUtil.cs" />
     <Compile Include="ARTComposition.cs" />
     <Compile Include="IArgonCompositionBuild.cs" />
     <Compile Include="Logger.cs" />

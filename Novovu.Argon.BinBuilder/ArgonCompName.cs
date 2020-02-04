@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Novovu.Argon.BinBuilder
+using Novovu.Argon;
+namespace AXDX.A
 {
     public class ArgonCompName : ARTComposition, IArgonCompositionBuild
     {
         private string b64 = "";
 
-        public ArgonCompName(object handl, object binda, object bindb) : base(handl)
+        public ArgonCompName(object binda, object bindb)
         {
             Bind("binda", binda);
             Bind("bindb", bindb);
         }
 
-        public string Build()
+        public string Build(object handl)
         {
+            SetHandle(handl);
             return Encoding.Unicode.GetString(Convert.FromBase64String(b64));
         }
 
