@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novovu.Argon.RTFramework", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novovu.Argon.BinBuilder", "Novovu.Argon.BinBuilder\Novovu.Argon.BinBuilder.csproj", "{9DCCB069-30A3-4254-BEA8-14D8ECF5BC40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novovu.Argon.WinForms", "Novovu.Argon.WinForms\Novovu.Argon.WinForms.csproj", "{8918BCCC-807B-4983-B132-AB9A930E1DEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,14 @@ Global
 		{9DCCB069-30A3-4254-BEA8-14D8ECF5BC40}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DCCB069-30A3-4254-BEA8-14D8ECF5BC40}.Release|x86.ActiveCfg = Release|Any CPU
 		{9DCCB069-30A3-4254-BEA8-14D8ECF5BC40}.Release|x86.Build.0 = Release|Any CPU
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Debug|Any CPU.Build.0 = Debug|x86
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Debug|x86.Build.0 = Debug|Any CPU
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Release|x86.ActiveCfg = Release|Any CPU
+		{8918BCCC-807B-4983-B132-AB9A930E1DEC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

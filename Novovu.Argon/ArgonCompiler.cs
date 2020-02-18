@@ -14,11 +14,7 @@ namespace Novovu.Argon
         public static void PrepareComposition(string[] jscripts, string incomp_path, string comp_name, string name_space)
         {
             Console.WriteLine($"Preparing composition for build: {name_space}.{comp_name}");
-            if (Directory.Exists("obj"))
-            {
-                Directory.Delete("obj", true);
-            }
-            Directory.CreateDirectory("obj");
+
             string reffx = File.ReadAllText(incomp_path);
             CompositionCodeParameters ccpx = new CompositionCodeParameters();
             

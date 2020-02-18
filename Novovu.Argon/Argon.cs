@@ -183,7 +183,7 @@ namespace Novovu.Argon
                 if (fi.FileType == FileIncludes.FileTypes.Script)
                 {
                     Console.WriteLine($"Building Scripts... ({fi.Name})");
-                    doc += $"<script>{File.ReadAllText(fi.Name)}</script>";
+                    doc += $"<script>{File.ReadAllText(fi.Name).Replace("public function","function")}</script>";
                 }
             }
             Console.WriteLine("Exporting...");

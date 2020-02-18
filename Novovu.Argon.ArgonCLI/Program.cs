@@ -48,7 +48,11 @@ namespace Novovu.Argon.ArgonCLI
                     {
                         string incomp = args[1];
                         string namespaces = args[2];
-
+                        if (Directory.Exists("obj"))
+                        {
+                            Directory.Delete("obj", true);
+                        }
+                        Directory.CreateDirectory("obj");
 
                         foreach (string file in Directory.GetFiles(incomp))
 

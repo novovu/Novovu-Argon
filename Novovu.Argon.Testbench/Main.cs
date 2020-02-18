@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AGX11;
+using Sushi.Build;
 namespace Novovu.Argon.Testbench
 {
     public partial class Main : Form
@@ -34,9 +34,8 @@ namespace Novovu.Argon.Testbench
         public ChromiumWebBrowser chromeBrowser;
         private async Task Form1_Load(object sender, EventArgs e)
         {
-            Composition1 comp = new Composition1("Novovu is my name");
-            bool americaIsGreat = await comp.makeAmericaGreat<bool>(true, "Donald Trump");
-            
+            Sushi.Build.Sushi sushicomp = new Sushi.Build.Sushi(false);
+            await sushicomp.sushiIsAwesome<bool>(new string[] { "sushay" });
         }
 
        

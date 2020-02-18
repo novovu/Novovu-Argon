@@ -191,7 +191,6 @@ C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.Testbench\bin\x86\Debug\
 C:\Users\JeremyX\Source\Repos\Novovu-Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.exe.config
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\obj\x86\Debug\Novovu.Argon.Testbench.exe.config
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Xenon.WorkshopUI.dll
-C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Argon.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Novovu.Xenon.XEF.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jeremy\source\repos\Novovu.Argon\Novovu.Argon.Testbench\bin\x86\Debug\Newtonsoft.Json.dll

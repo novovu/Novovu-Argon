@@ -2,6 +2,7 @@
 using CefSharp.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,11 @@ namespace Novovu.Argon
         {
             if (!e.IsLoading)
             {
-                OnLoadComplete.Invoke(this, null);
+                if (OnLoadComplete != null)
+                {
+                    OnLoadComplete.Invoke(this, null);
+                }
+                
             }
         }
 
@@ -36,7 +41,15 @@ namespace Novovu.Argon
             string query = method + "(";
             foreach (object ax in methodPs)
             {
-                query += ax.ToString() + ",";
+                if (ax.GetType() == typeof(string))
+                {
+                    query += "'" + ax.ToString() +"'"+ ",";
+                }
+                else
+                {
+                    query += ax.ToString() + ",";
+                }
+                
             }
             query = query.TrimEnd(',');
             query += ")";

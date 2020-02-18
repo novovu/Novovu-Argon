@@ -31,20 +31,19 @@ namespace Novovu.Argon
                 }
             }
         }
+
         public static string DecompressString(string input)
         {
             using (MemoryStream memstrm = new MemoryStream())
             {
                
-                using (MemoryStream decompressed = new MemoryStream())
+                using (MemoryStream decompressed = new MemoryStream(Convert.FromBase64String(input)))
                 {
                     using (GZipStream cstream = new GZipStream(decompressed, CompressionMode.Decompress, true))
                     {
-                        byte[] bytes = Convert.FromBase64String(input);
-                        cstream.Write(bytes, 0, bytes.Length);
-
+                        cstream.CopyTo(memstrm);
                     }
-                    return Encoding.Unicode.GetString(ReadToEnd(decompressed));
+                    return Encoding.Unicode.GetString(ReadToEnd(memstrm));
                 }
             }
             
