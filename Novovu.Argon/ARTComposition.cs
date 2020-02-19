@@ -38,18 +38,13 @@ namespace Novovu.Argon
         }
         public async Task<T> RunJSMethod<T>(string method, params object[] methodPs)
         {
+            
             string query = method + "(";
             foreach (object ax in methodPs)
             {
-                if (ax.GetType() == typeof(string))
-                {
-                    query += "'" + ax.ToString() +"'"+ ",";
-                }
-                else
-                {
-                    query += ax.ToString() + ",";
-                }
-                
+                string handleId = (method + ax.GetHashCode());
+                handle.JavascriptObjectRepository.Register(handleId, ax);
+                query += handleId + ",";
             }
             query = query.TrimEnd(',');
             query += ")";
