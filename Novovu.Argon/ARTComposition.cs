@@ -36,15 +36,39 @@ namespace Novovu.Argon
             JavascriptResponse response = await handle.GetBrowser().MainFrame.EvaluateScriptAsync(scr);
             return (T)response.Result;
         }
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
         public async Task<T> RunJSMethod<T>(string method, params object[] methodPs)
         {
             
             string query = method + "(";
             foreach (object ax in methodPs)
             {
-                string handleId = (method + ax.GetHashCode());
-                handle.JavascriptObjectRepository.Register(handleId, ax);
-                query += handleId + ",";
+                string handleId = (method + RandomString(6));
+                
+                //Cannot use their object storage registry because they are ghetto.
+                if (ax.GetType().BaseType.Namespace.StartsWith("System"))
+                {
+                    if (ax.GetType() == typeof(string))
+                    {
+                        query += '"' + ax.ToString() + '"' + ",";
+                    }
+                    else {
+                        query += ax.ToString() + ",";
+                    }
+
+                }else
+                {
+                    handle.JavascriptObjectRepository.Register(handleId, ax);
+                    query += handleId + ",";
+                }
+
+                
             }
             query = query.TrimEnd(',');
             query += ")";

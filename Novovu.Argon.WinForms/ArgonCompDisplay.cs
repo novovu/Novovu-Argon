@@ -20,7 +20,7 @@ namespace Novovu.Argon.WinForms
         public ArgonCompDisplay()
         {
             InitializeComponent();
-            
+            CefSharpSettings.WcfEnabled = true;
         }
         public Size RequestedSize
         {
