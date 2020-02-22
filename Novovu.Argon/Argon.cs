@@ -197,50 +197,62 @@ namespace Novovu.Argon
             {
                 return input;
             }
-            string full = input.Substring(start, end - start + element.Length + 3);
-            int innerStart = full.IndexOf(">");
-            int innerEnd = full.IndexOf($"</{element}>");
-            string xds = full.Substring(innerStart + 1, innerEnd - innerStart - 1);
-            int inputFields = full.IndexOf($"<{element}");
-            int inputEnd = full.IndexOf(">");
-            string paramss = full.Substring(inputFields, inputEnd - inputFields).Replace($"<{element} ", "");
-            string[] paramsx = paramss.Split('"');
-            elemobj.ClearAttributes();
-            string handleParam = null;
-            if (paramsx.Length > 1)
+            try
             {
-
-                for (int i = 0; i < paramsx.Length; i += 1)
+                string full = input.Substring(start, end - start + element.Length + 3);
+                int innerStart = full.IndexOf(">");
+                int innerEnd = full.IndexOf($"</{element}>");
+                string xds = full.Substring(innerStart + 1, innerEnd - innerStart - 1);
+                int inputFields = full.IndexOf($"<{element}");
+                int inputEnd = full.IndexOf(">");
+                string paramss = full.Substring(inputFields, inputEnd - inputFields).Replace($"<{element} ", "");
+                string[] paramsx = paramss.Split('"');
+                elemobj.ClearAttributes();
+                string handleParam = null;
+                if (paramsx.Length > 1)
                 {
-                    //Console.WriteLine(paramsx[i]);
-                    if (handleParam == null)
+
+                    for (int i = 0; i < paramsx.Length; i += 1)
                     {
-                        handleParam = paramsx[i];
-                        if (handleParam.ToCharArray().Length > 0)
+                        //Console.WriteLine(paramsx[i]);
+                        if (handleParam == null)
                         {
-                            if (handleParam.ToCharArray()[0] == ' ')
+                            handleParam = paramsx[i];
+                            if (handleParam.ToCharArray().Length > 0)
                             {
-                                handleParam = handleParam.Substring(1);
+                                if (handleParam.ToCharArray()[0] == ' ')
+                                {
+                                    handleParam = handleParam.Substring(1);
+                                }
+                                handleParam = handleParam.Substring(0, handleParam.Length - 1);
                             }
-                            handleParam = handleParam.Substring(0, handleParam.Length - 1);
-                        }else
+                            else
+                            {
+                                handleParam = null;
+                            }
+
+                        }
+                        else
                         {
+
+                            elemobj.Variables[handleParam] = paramsx[i].Replace("\"", "").Replace("'", "");
+
                             handleParam = null;
                         }
-                        
-                    }else
-                    {
 
-                        elemobj.Variables[handleParam] = paramsx[i].Replace("\"", "").Replace("'", "");
-
-                        handleParam = null;
                     }
-                    
                 }
-            }
 
-            input = input.Replace(full, elemobj.Build().Replace("[body]", xds));
-            return PlugAndChug(input, element, elemobj);
+                input = input.Replace(full, elemobj.Build().Replace("[body]", xds));
+                return PlugAndChug(input, element, elemobj);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Render failed: Invalid composition");
+                return "";
+            }
+            
+            
         }
     }
 }
