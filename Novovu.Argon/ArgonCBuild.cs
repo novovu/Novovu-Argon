@@ -23,7 +23,9 @@ namespace Novovu.Argon
             string paramN = "";
             foreach (string s in paramsx)
             {
-                paramN += "object " + s + ",";
+                if (s != "" && s!=" ") {
+                    paramN += "object " + s + ",";
+                }
             }
             paramN = paramN.TrimEnd(',');
             string paramZ = "";
