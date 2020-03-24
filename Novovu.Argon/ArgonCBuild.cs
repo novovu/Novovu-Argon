@@ -24,21 +24,33 @@ namespace Novovu.Argon
             foreach (string s in paramsx)
             {
                 if (s != "" && s!=" ") {
-                    paramN += "object " + s + ",";
+                    string nsx = s;
+                    nsx = s.Replace(" ", "");
+                    if (nsx.Contains("=")) {
+                        nsx = nsx.Split('=')[0] + " = null";
+                    }
+                    
+                    paramN += "object " + nsx + ",";
                 }
             }
             paramN = paramN.TrimEnd(',');
             string paramZ = "";
             foreach (string s in paramsx)
             {
-                paramZ += s + ",";
+                if (s != "" && s != " ")
+                {
+                    
+                    paramZ += s + ",";
+                }
             }
+            
             paramZ = paramZ.TrimEnd(',');
+            //Console.WriteLine($"'{paramZ}'");
             if (paramsx.Length >0)
             {
                 paramsx[0] = paramsx[0].Replace(Environment.NewLine, "").Replace("\n", "").Replace("\r", "");
 
-                if (paramsx[0] != "")
+                if (paramsx[0] != ""&& paramsx[0] !=" ")
                 {
                     return "public async Task<T> %%NAME%%<T>(%%N%%) { return await RunJSMethod<T>(\"%%NAME%%\", %%Z%%); }".Replace("%%N%%", paramN).Replace("%%Z%%", paramZ).Replace("%%NAME%%", name);
                 }else
