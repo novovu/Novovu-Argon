@@ -111,7 +111,7 @@ namespace Novovu.Argon
 
                     LightVarObjectRepo.Add(handleId, ax);
                     JSEvalAsync<bool>("CefSharp.BindObjectAsync('"+handleId+"');");
-                    await Task.Delay(500);
+                    await Task.Delay(1000);
                     
                     
                     //handle.JavascriptObjectRepository.Register(handleId, ax);
